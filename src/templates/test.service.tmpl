@@ -1,0 +1,11 @@
+[Unit]
+Description=Test service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 {{ charm_dir }}/src/test_daemon.py
+
+[Install]
+WantedBy=multi-user.target
