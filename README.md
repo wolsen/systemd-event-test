@@ -1,26 +1,12 @@
-<!--
-Avoid using this README file for information that is maintained or published elsewhere, e.g.:
-
-* metadata.yaml > published on Charmhub
-* documentation > published on (or linked to from) Charmhub
-* detailed contribution guide > documentation or CONTRIBUTING.md
-
-Use links instead.
--->
-
 # systemd-event-test
 
-Charmhub package name: operator-template
-More information: https://charmhub.io/systemd-event-test
+This is a sample charm which puts in place a proof of concept for watching
+systemd service events (start/stop) and calling hooks back into the juju charm.
 
-Describe your charm in one or two sentences.
+When this charm is deployed, it installs a simple test systemd service. When the
+service is stopped, the charm status will be updated to blocked indicating the service
+is stopped. When the service is started, the charm status will be updated to
+active indicating the service is started.
 
-## Other resources
-
-<!-- If your charm is documented somewhere else other than Charmhub, provide a link separately. -->
-
-- [Read more](https://example.com)
-
-- [Contributing](CONTRIBUTING.md) <!-- or link to other contribution documentation -->
-
-- See the [Juju SDK documentation](https://juju.is/docs/sdk) for more information about developing and improving charms.
+Note: this is only a POC at this point of time and the methodology is expected
+to evolve.
