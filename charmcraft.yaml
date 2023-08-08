@@ -1,4 +1,10 @@
 type: charm
+parts:
+  charm:
+    build-packages:
+      - git
+    charm-python-packages:
+      - setuptools
 bases:
   - build-on:
     - name: ubuntu
