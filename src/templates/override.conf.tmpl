@@ -1,3 +1,0 @@
-[Service]
-ExecStartPost=-/usr/bin/python3 {{ charm_dir }}/src/record_event.py --service {{ service }} --unit {{ unit }} --event started
-ExecStopPost=-/usr/bin/python3 {{ charm_dir }}/src/record_event.py --service {{ service }} --unit {{ unit }} --event stopped
